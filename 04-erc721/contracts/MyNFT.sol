@@ -12,11 +12,11 @@ contract MyNFT is ERC721URIStorage {
     constructor() ERC721("MyERC721Token", "MET") {}
 
     function mint() external {
-        // _safeMint(msg.sender, tokenId);
-        // _setTokenURI(
-        //     tokenId,
-        //     "https://path/to/metadata-uri"
-        // );
-        // tokenId++;
+         _safeMint(msg.sender, tokenId);
+        _setTokenURI(
+        tokenId,
+         "https://raw.githubusercontent.com/MaikuSempai/core-bootcamp/refs/heads/main/04-erc721/metadata.json"
+         );
+        tokenId++;
     }
 }
